@@ -63,6 +63,7 @@
 											 MaxAA="97"
 											 MaxEvasion="10"
 											 Name="金剛改二"
+                                             ShipClass="金剛型"
 											 Speed="Low">
 								<Models:ShipInfo.ShipType>
 									<Models:ShipType Name="戦艦" />
@@ -136,6 +137,7 @@
 											 MaxAA="97"
 											 MaxEvasion="10"
 											 Name="榛名"
+                                             ShipClass="金剛型"
 											 Speed="Low">
 								<Models:ShipInfo.ShipType>
 									<Models:ShipType Name="戦艦" />
@@ -209,6 +211,7 @@
 											 MaxAA="97"
 											 MaxEvasion="10"
 											 Name="北上改二"
+                                             ShipClass="球磨型"
 											 Speed="Low">
 								<Models:ShipInfo.ShipType>
 									<Models:ShipType Name="重雷装巡洋艦" />
@@ -282,6 +285,7 @@
 											 MaxAA="97"
 											 MaxEvasion="10"
 											 Name="伊19"
+                                             ShipClass="巡潜乙型"
 											 Speed="Low">
 								<Models:ShipInfo.ShipType>
 									<Models:ShipType Name="潜水艦" />

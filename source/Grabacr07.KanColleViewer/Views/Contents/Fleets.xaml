@@ -87,6 +87,8 @@
 				  DataContext="{Binding SelectedFleet}"
 				  d:DataContext="{d:DesignData /SampleData/FleetViewModelSampleData.xaml}">
 
+				<StackPanel>
+
 				<ItemsControl ItemsSource="{Binding Ships}"
 							  Grid.IsSharedSizeScope="True"
 							  VerticalAlignment="Top"
@@ -485,6 +487,16 @@
 						</DataTemplate>
 					</ItemsControl.ItemTemplate>
 				</ItemsControl>
+
+				<StackPanel Orientation="Horizontal">
+					<metro2:CallMethodButton Content="艦隊情報をコピー"
+											 Padding="12,8"
+											 Margin="8"
+											 MethodName="CopyFleetInformation" />
+				</StackPanel>
+
+				</StackPanel>
+
 			</Grid>
 		</Grid>
 	</ScrollViewer>

@@ -515,7 +515,8 @@
 
 				<ListView ItemsSource="{Binding Ships}"
 						  ItemContainerStyle="{DynamicResource GridViewItemContainerStyleKey}"
-						  ScrollViewer.PanningMode="Both">
+						  ScrollViewer.PanningMode="Both"
+                          Grid.IsSharedSizeScope="True">
 					<ListView.Resources>
 						<Style TargetType="{x:Type TextBlock}">
 							<Setter Property="Margin"
@@ -687,15 +688,21 @@
                             <GridViewColumn Width="64">
                                 <GridViewColumn.Header>
                                     <metro2:SortButton MethodName="Sort"
-													   MethodParameter="{x:Static viewModels:ShipCatalogSortWorker.HPColumn}">
-                                        <TextBlock Text="耐久" />
+													   MethodParameter="{x:Static viewModels:ShipCatalogSortWorker.HPPercentageColumn}">
+                                        <TextBlock Text="耐久%" />
                                     </metro2:SortButton>
                                 </GridViewColumn.Header>
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
-                                        <TextBlock Text="{Binding Ship.HP.Current, Mode=OneWay}"
-												   Foreground="{DynamicResource ActiveForegroundBrushKey}"
-												   Margin="0,3" />
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" SharedSizeGroup="HPPercentageColumn"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock HorizontalAlignment="Right"
+                                                       Text="{Binding Ship.HPPercentage.Current, Mode=OneWay, StringFormat=0.0}"
+												       Foreground="{DynamicResource ActiveForegroundBrushKey}"
+												       Margin="0,3"/>
+                                        </Grid>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>

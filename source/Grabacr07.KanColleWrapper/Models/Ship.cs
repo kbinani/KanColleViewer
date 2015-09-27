@@ -87,6 +87,18 @@ namespace Grabacr07.KanColleWrapper.Models
 			}
 		}
 
+        /// <summary>
+        /// 耐久値のパーセンテージを取得します。
+        /// </summary>
+        public LimitedValue<float> HPPercentage
+        {
+            get
+            {
+                float percentage = (HP.Current - HP.Minimum) / (float)(HP.Maximum - HP.Minimum) * 100.0f;
+                return new LimitedValue<float>(percentage, 100.0f, 0.0f);
+            }
+        }
+
 		#endregion
 
 		#region Fuel 変更通知プロパティ

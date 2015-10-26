@@ -18,8 +18,8 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 		public static readonly SortableColumn StypeColumn = new SortableColumn { Name = "艦種", KeySelector = x => x.Info.ShipType.SortNumber, };
 		public static readonly SortableColumn NameColumn = new SortableColumn { Name = "艦名", KeySelector = x => x.Info.SortId, };
         public static readonly SortableColumn ClassColumn = new SortableColumn { Name = "艦型", KeySelector = x => x.Info.ShipClass.GetHashCode(), };
-        public static readonly SortableColumn LevelColumn = new SortableColumn { Name = "レベル", KeySelector = x => x.Level, DefaultIsDescending = true, };
-		public static readonly SortableColumn ExpColumn = new SortableColumn { Name = "次のレベルまでの経験値", KeySelector = x => x.ExpForNextLevel, };
+        public static readonly SortableColumn LevelColumn = new SortableColumn { Name = "レベル", KeySelector = x => x.Level };
+		public static readonly SortableColumn ExpColumn = new SortableColumn { Name = "次のレベルまでの経験値", KeySelector = x => x.ExpForNextLevel, DefaultIsDescending = true };
 		public static readonly SortableColumn CondColumn = new SortableColumn { Name = "Condition 値", KeySelector = x => x.Condition, DefaultIsDescending = true, };
 		public static readonly SortableColumn FirepowerColumn = new SortableColumn { Name = "火力", KeySelector = x => x.Firepower.Current, DefaultIsDescending = true, };
 		public static readonly SortableColumn TorpedoColumn = new SortableColumn { Name = "雷装", KeySelector = x => x.Torpedo.Current, DefaultIsDescending = true, };
